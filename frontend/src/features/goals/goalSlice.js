@@ -40,15 +40,20 @@ export const getGoals = createAsyncThunk('goals/getAll', async (_, thunkAPI) => 
 });
 
 export const goalSlice = createSlice({
-    name: 'goal',
+    name: 'goals',
     initialState,
-    reducer: {
+    reducers: {
         reset: function(state) {
-            state.goals = [];
-            state.isError = false;
-            state.isSuccess = false;
-            state.isLoading = false;
-            state.message = '';
+            // state.goals = [];
+            // state.isError = false;
+            // state.isSuccess = false;
+            // state.isLoading = false;
+            // state.message = '';
+            // console.log(`This is initialState: ${initialState.isError} ${initialState.isLoading} ${initialState.isSuccess}`);
+
+            state = initialState;
+            // console.log(`This is state: ${state.isError} ${state.isLoading} ${state.isSuccess}`);
+            // console.log('goalSlice reset reducer');
         }
     },
     extraReducers: (builer) => {

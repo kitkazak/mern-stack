@@ -23,10 +23,9 @@ function Dashboard() {
 
     dispatch(getGoals());
 
-    //IDK why the heck this is not working lol
-    // return () => {
-    //   dispatch(reset());  
-    // }
+    return () => {
+      dispatch(reset());  
+    }
   }, [user, navigate, isError, message, dispatch]);
   
   if (isLoading) {
