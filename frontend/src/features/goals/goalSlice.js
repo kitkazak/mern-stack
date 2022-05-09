@@ -44,16 +44,8 @@ export const goalSlice = createSlice({
     initialState,
     reducers: {
         reset: function(state) {
-            // state.goals = [];
-            // state.isError = false;
-            // state.isSuccess = false;
-            // state.isLoading = false;
-            // state.message = '';
-            // console.log(`This is initialState: ${initialState.isError} ${initialState.isLoading} ${initialState.isSuccess}`);
-
-            state = initialState;
-            // console.log(`This is state: ${state.isError} ${state.isLoading} ${state.isSuccess}`);
-            // console.log('goalSlice reset reducer');
+            // If I update the state from here it causes an infinite loop
+            // I have no idea how to deal with it
         }
     },
     extraReducers: (builer) => {
